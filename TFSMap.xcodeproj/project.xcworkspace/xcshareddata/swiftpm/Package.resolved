@@ -1,0 +1,33 @@
+{
+  "originHash" : "913a5f3318f892f093bcc35cb3494eca2f42b5cc26b71cfe36926ad8e738af30",
+  "pins" : [
+    {
+      "identity" : "cgmath",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gadirom/CGMath",
+      "state" : {
+        "revision" : "a3c95cc48283f79441a1d10c1762c33400a0bc99",
+        "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "svgview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/SVGView.git",
+      "state" : {
+        "revision" : "6465962facdd25cb96eaebc35603afa2f15d2c0d",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "transformgesture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gadirom/TransformGesture",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6b67c6d3989efc0be4cf0de1d735c2c480e5360c"
+      }
+    }
+  ],
+  "version" : 3
+}
