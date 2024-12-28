@@ -12,6 +12,7 @@ import SVGView
 
 struct MapView: View {
 
+    private static let textAppearScale = 7.0
     @State private var circleColor: Color = .blue
     @StateObject var transform = TouchTransform(translation: CGSize(width: 100, height: 190), scale: 3, scaleRange: 3...30, rotationRange: 0...0)
     private var circlePath = Path(ellipseIn: CGRect(x: 0, y: 0, width: 100, height:100))
@@ -66,11 +67,11 @@ struct MapView: View {
     }
     
     func computeTextOpacity() -> CGFloat {
-        return (transform.scale - 2) * 3
+        return transform.scale >= Self.textAppearScale ? 1.0 : 0.0
     }
     
     func drawText(_ context: inout GraphicsContext, _ string: String, _ point: CGPoint) {
-        var textPos = CGPoint(x: point.x, y: point.y)
+        var textPos = CGPoint(x: point.x, y: point.y + 46)
         textPos.x -= canvasSize.width * 0.5
         textPos.y -= canvasSize.height * 0.5
         let transformedPos = transform.matrix.transformed2D(textPos.simd_float2)
@@ -78,16 +79,23 @@ struct MapView: View {
         textPoint.y -= transform.translation.height
         textPoint.x -= transform.translation.width
         
+        let font = Font.system(size: 20)
+        
+        let shadowText = Text(string)
+            .font(font)
+            .foregroundStyle(.black.opacity(computeTextOpacity()))
+        let shadowTextPos = CGPoint(x: textPoint.x + 2, y: textPoint.y + 2)
+        context.draw(context.resolve(shadowText), at: shadowTextPos, anchor: .center)
+        
         let text = Text(string)
-            .font(.system(size:15))
+            .font(font)
             .foregroundStyle(.white.opacity(computeTextOpacity()))
-        let resolvedText = context.resolve(text)
-        context.draw(resolvedText, at: textPoint, anchor: .center)
+        context.draw(context.resolve(text), at: textPoint, anchor: .center)
     }
     
     var body: some View {
         ZStack {
-            Color(red: 0.4, green: 0.6, blue: 0.3)
+            Color("MapBackground", bundle: Bundle.main)
             
             svgView
                 .transformEffect(transform)
@@ -109,7 +117,7 @@ struct MapView: View {
             }
         }
         .transformGesture(transform: transform, draggingDisabled: true, onTap: onTapped)
-        .clipped()
+        .ignoresSafeArea()
     }
 }
 
