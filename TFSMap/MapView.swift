@@ -13,14 +13,34 @@ import SVGView
 struct MapView: View {
 
     private static let textAppearScale = 7.0
-    @State private var circleColor: Color = .blue
-    @StateObject var transform = TouchTransform(translation: CGSize(width: 100, height: 190), scale: 3, scaleRange: 3...30, rotationRange: 0...0)
-    private var circlePath = Path(ellipseIn: CGRect(x: 0, y: 0, width: 100, height:100))
+    @StateObject private var transform = TouchTransform(translation: CGSize(width: 100, height: 190), scale: 3, scaleRange: 3...30, rotationRange: 0...0)
     @State private var canvasSize: CGSize = CGSize()
     @State private var svgView: SVGView
+    private var svgText: String
+    private var redHitBox: SVGRect!
     
     init() {
-        svgView = SVGView(contentsOf: Bundle.main.url(forResource: "Map", withExtension: "svg")!)
+        if let file = Bundle.main.url(forResource: "Tandem3", withExtension: "svg")
+        {
+            do {
+                svgText = try String(contentsOf: file, encoding: .utf8)
+            } catch {
+                svgText = ""
+                print("Failed to load SVG text from file")
+            }
+        }
+        else
+        {
+            svgText = ""
+        }
+        
+        self.svgView = SVGView(contentsOf: Bundle.main.url(forResource: "Tandem3", withExtension: "svg")!)
+        
+        let node = self.svgView.getNode(byId: "Main_HitBox")
+        if let hitBox = node as? SVGRect {
+            redHitBox = hitBox
+        }
+        //node?.opacity = 0
     }
     
     func applyTranslateTransform(to context: inout GraphicsContext) {
@@ -57,12 +77,8 @@ struct MapView: View {
         point.x += canvasSize.width * 0.5
         point.y += canvasSize.height * 0.5
         
-        if circlePath.contains(point) {
-            if circleColor == .blue {
-                circleColor = .red
-            } else {
-                circleColor = .blue
-            }
+        if (point.x >= redHitBox.x && point.y >= redHitBox.y && point.x < redHitBox.x + redHitBox.width && point.y < redHitBox.y + redHitBox.height) {
+            redHitBox.fill = SVGColor.init(r: 0, g: 255, b: 0)
         }
     }
     
@@ -97,22 +113,23 @@ struct MapView: View {
         ZStack {
             Color("MapBackground", bundle: Bundle.main)
             
-            svgView
-                .transformEffect(transform)
+
             
             GeometryReader { geometry in
+                canvasSize = geometry.size
+                
+                svgView
+                    .transformEffect(transform)
+                
                 Canvas { context, size in
                     
-                    applyTranslateTransform(to: &context)
+                    //applyTranslateTransform(to: &context)
                     
-                    drawText(&context, "Math/Science Building", CGPoint(x: 205, y: 285))
-                    drawText(&context, "Community Hall", CGPoint(x: 125, y: 310))
-                    drawText(&context, "Main Building", CGPoint(x: 170, y: 345))
-                    drawText(&context, "Arts Annex", CGPoint(x: 200, y: 315))
-                    drawText(&context, "Pavilion", CGPoint(x: 130, y: 285))
-                }
-                .onAppear {
-                    canvasSize = geometry.size
+                    //drawText(&context, "Math/Science Building", CGPoint(x: 205, y: 285))
+                    //drawText(&context, "Community Hall", CGPoint(x: 125, y: 310))
+                    //drawText(&context, "Main Building", CGPoint(x: 170, y: 345))
+                    //drawText(&context, "Arts Annex", CGPoint(x: 200, y: 315))
+                    //drawText(&context, "Pavilion", CGPoint(x: 130, y: 285))
                 }
             }
         }
