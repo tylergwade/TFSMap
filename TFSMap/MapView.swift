@@ -10,6 +10,38 @@ import TransformGesture
 import simd
 import SVGView
 
+class Room {
+    public let name: String
+    
+    init(named name: String) {
+        self.name = name
+    }
+}
+
+class Floor {
+    
+    public let svgNode: SVGNode
+    public let rooms:[Room] = []
+    
+    init(svgNode: SVGNode) {
+        self.svgNode = svgNode
+    }
+}
+
+class Building {
+    
+    public let name: String
+    public let roofNode: SVGNode
+    public let hitRect: CGRect
+    public let floors:[Floor] = []
+    
+    init(named name: String, roofNode: SVGNode, hitRect: CGRect) {
+        self.name = name
+        self.roofNode = roofNode
+        self.hitRect = hitRect
+    }
+}
+
 struct MapView: View {
     
     // Coordinate spaces
@@ -47,7 +79,7 @@ struct MapView: View {
     @State private var svgView: SVGView
     
     // Hit detection test
-    @State private var redHitBox: SVGRect? // Make it optional for safety
+    @State private var redHitBox: SVGRect? = nil // Make it optional for safety
     @State private var redRect: CGRect = .zero
     @State private var hitPoint: CGPoint = .zero
     @State private var isHitBoxTapped: Bool = false // Track tap state
@@ -55,11 +87,46 @@ struct MapView: View {
     @State private var svgDisplayScale: CGFloat = 0
     @State private var svgDisplaySize: CGSize = .zero
     
+    // The building that is currently selected
+    // When a building is selected, its roof is hidden
+    // revealing the interior.
+    @State private var selectedBuilding: Building? = nil
+    
+    private var buildings:[Building] = []
+    
     init() {
         
         // Load the SVG view
-        let svgURL = Bundle.main.url(forResource: "Tandem5", withExtension: "svg")!
+        let svgURL = Bundle.main.url(forResource: "TandemMap", withExtension: "svg")!
         self.svgView = SVGView(contentsOf: svgURL)
+        
+        buildings.append(
+            Building(
+                named: "Main Building",
+                roofNode: getNode(named: "Main_Roof"),
+                hitRect: getRect(named: "Main_HitBox")))
+        
+        buildings.append(
+            Building(
+                named: "Community Hall",
+                roofNode: getNode(named: "Community_Roof"),
+                hitRect: getRect(named: "Community_HitBox")))
+    }
+    
+    func getNode(named name: String) -> SVGNode {
+        return svgView.getNode(byId: name)!
+    }
+    
+    func getRect(named name: String) -> CGRect {
+        return svgRectToCGRect(getNode(named: name) as! SVGRect)
+    }
+    
+    func svgRectToCGRect(_ svgRect: SVGRect) -> CGRect {
+        return CGRect(
+            x: svgRect.x,
+            y: svgRect.y,
+            width: svgRect.width,
+            height: svgRect.height)
     }
     
     // Transforms a point from screen space to map space
@@ -111,33 +178,23 @@ struct MapView: View {
         
         hitPoint = mapPoint
         
-        //cLocation.x += canvasSize.width / 2
-        //cLocation.y += canvasSize.height / 2
-        
-        //localHitPoint.x *= 2
-        //localHitPoint.y *= 2
-        
-        //hitPoint = localHitPoint
-        
-
-        //print("Point: \(hitPoint)")
-        
-        if redRect.contains(mapPoint) {
-        
-            isHitBoxTapped.toggle() // Toggle hit detection state
-            updateHitBoxColor()
+        for building in buildings {
+            if building.hitRect.contains(mapPoint) {
+                selectedBuilding = building
+                building.roofNode.opacity = 0
+                break;
+            }
         }
         
-        //point.x += canvasSize.width * 0.5
-        //point.y += canvasSize.height * 0.5
-        
-        //if (point.x >= redHitBox.x && point.y >= redHitBox.y && point.x < redHitBox.x + redHitBox.width && point.y < redHitBox.y + redHitBox.height) {
-        //    redHitBox.fill = SVGColor.init(r: 0, g: 255, b: 0)
+        //if redRect.contains(mapPoint) {
+        //    let node = svgView.getNode(byId: "Main_Roof")
+        //    node?.opacity = 0
         //}
     }
     
     func computeTextOpacity() -> CGFloat {
-        return transform.scale >= Self.textAppearScale ? 1.0 : 0.0
+        return 1.0
+//        return transform.scale >= Self.textAppearScale ? 1.0 : 0.0
     }
     
     func drawText(_ context: inout GraphicsContext, _ string: String, _ point: CGPoint) {
@@ -164,20 +221,21 @@ struct MapView: View {
     }
     
     private func setupHitBox() {
-        let node = svgView.getNode(byId: "Main_HitBox")
-        if let hitBox = node as? SVGRect {
-            redHitBox = hitBox
-            redRect = CGRect(
-                x: hitBox.x,
-                y: hitBox.y,
-                width: hitBox.width,
-                height: hitBox.height)
-        } else {
-            redRect = CGRect(x: 100, y: 100, width: 100, height: 100)
-        }
+        
+        //let node = svgView.getNode(byId: "Main_HitBox")
+        //if let hitBox = node as? SVGRect {
+        //    redHitBox = hitBox
+        //    redRect = CGRect(
+        //        x: hitBox.x,
+        //        y: hitBox.y,
+        //        width: hitBox.width,
+        //        height: hitBox.height)
+        //} else {
+        //    redRect = CGRect(x: 100, y: 100, width: 100, height: 100)
+        //}
         
         //redRect = CGRect(x: 100, y: 100, width: 100, height: 100)
-        print("\(redRect)")
+        //print("\(redRect)")
     }
     
     var body: some View {
@@ -203,15 +261,33 @@ struct MapView: View {
             Canvas { context, _ in
                 // Draw hit detection point for debugging
                 
-                let point = MapToScreenSpace(hitPoint)
-                context.fill(
-                    Path(CGRect(
-                        x: point.x,
-                        y: point.y,
-                        width: 50,
-                        height: 50)),
-                    with: .color(.blue)
-                )
+                
+                for building in buildings {
+                    
+                    let mapPoint = CGPoint(
+                        x: building.hitRect.midX,
+                        y: building.hitRect.midY)
+                    
+                    let screenPoint = MapToScreenSpace(mapPoint)
+                    
+                    context.fill(
+                        Path(CGRect(
+                            x: screenPoint.x,
+                            y: screenPoint.y,
+                            width: 50,
+                            height: 50)),
+                        with: .color(.blue))
+                    
+
+                    
+                   
+//                    
+//                    drawText(&context, building.name, screenPoint)
+                }
+                
+//                let point = MapToScreenSpace(hitPoint)
+
+//                )
             }
         }
         .transformGesture(transform: transform, draggingDisabled: true, onTap: onTapped)
