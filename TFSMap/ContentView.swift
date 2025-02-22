@@ -13,15 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         MapView()
+            // This app only supports light mode
+            // so make sure that is enforced.
+            .colorScheme(.light)
     }
 }
-
-//VStack {
-//    Text("TFS Map")
-//        .font(.system(size: 100))
-//        .frame(width: .infinity, height: 700, alignment: .top)
-//    
-//}
 
 #Preview {
     ContentView()
