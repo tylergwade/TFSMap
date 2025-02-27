@@ -33,7 +33,7 @@ class Building {
     public let name: String
     public let roofNode: SVGNode
     public let hitRect: CGRect
-    public let floors:[Floor] = []
+    public var floors:[Floor] = []
     
     init(named name: String, roofNode: SVGNode, hitRect: CGRect) {
         self.name = name
@@ -91,65 +91,90 @@ struct MapView: View {
         let svgURL = Bundle.main.url(forResource: "TandemMap", withExtension: "svg")!
         self.svgView = SVGView(contentsOf: svgURL)
         
-//        buildings.append(
-//            Building(
-//                named: "Main Building",
-//                roofNode: getNode(named: "Main_Roof"),
-//                hitRect: getRect(named: "Main_HitBox")))
-//        
-//        buildings.append(
-//            Building(
-//                named: "Community Hall",
-//                roofNode: getNode(named: "Community_Roof"),
-//                hitRect: getRect(named: "Community_HitBox")))
+        var mainBldg = Building(named: "Main Building",
+            roofNode: getNode(named: "Main_Roof"),
+            hitRect: getRect(named: "Main_HitBox"));
         
-        buildings.append(
-            Building(
-                named: "Main Building",
-                roofNode: getNode(named: "Main_Roof"),
-                hitRect: getRect(named: "Main_HitBox")))
+        var mainBldg_F1 = Floor(svgNode: getNode(named: "Main_F1"))
+        var mainBldg_F2 = Floor(svgNode: getNode(named: "Main_F2"))
+        mainBldg.floors.append(mainBldg_F1)
+        mainBldg.floors.append(mainBldg_F2)
+        mainBldg_F1.svgNode.opacity = 0
+        mainBldg_F2.svgNode.opacity = 0
         
-        buildings.append(
-            Building(
-                named: "Community Hall",
-                roofNode: getNode(named: "Community_Roof"),
-                hitRect: getRect(named: "Community_HitBox")))
+        var communityBldg = Building(named: "Community Hall",
+            roofNode: getNode(named: "Community_Roof"),
+            hitRect: getRect(named: "Community_HitBox"))
         
-        buildings.append(
-            Building(
-                named: "Arts Annex",
-                roofNode: getNode(named: "Art_Roof"),
-                hitRect: getRect(named: "Art_HitBox")))
-                
-        buildings.append(
-            Building(
-                named: "Music",
-                roofNode: getNode(named: "Music_Roof"),
-                hitRect: getRect(named: "Music_HitBox")))
-                
-        buildings.append(
-            Building(
-                named: "Middle School",
-                roofNode: getNode(named: "Middle_Roof"),
-                hitRect: getRect(named: "Middle_HitBox")))
+        var communityBldg_F1 = Floor(svgNode: getNode(named: "Community_F1"))
+        var communityBldg_F2 = Floor(svgNode: getNode(named: "Community_F2"))
+        communityBldg.floors.append(communityBldg_F1)
+        communityBldg.floors.append(communityBldg_F2)
+        communityBldg_F1.svgNode.opacity = 0
+        communityBldg_F2.svgNode.opacity = 0
         
-        buildings.append(
-            Building(
-                named: "Math/Science Building",
-                roofNode: getNode(named: "Math_Roof"),
-                hitRect: getRect(named: "Math_HitBox")))
+        var artBldg = Building(named: "Arts Annex",
+            roofNode: getNode(named: "Art_Roof"),
+            hitRect: getRect(named: "Art_HitBox"))
         
-        buildings.append(
-            Building(
-                named: "Pavilion",
-                roofNode: getNode(named: "Pavilion_Roof"),
-                hitRect: getRect(named: "Pavilion_HitBox")))
+        var artBldg_F1 = Floor(svgNode: getNode(named: "Art_F1"))
+        artBldg.floors.append(artBldg_F1)
+        artBldg_F1.svgNode.opacity = 0
         
-        buildings.append(
-            Building(
-                named: "Field House/Gym",
-                roofNode: getNode(named: "Gym_Roof"),
-                hitRect: getRect(named: "Gym_HitBox")))
+        var musicBldg = Building(named: "Music",
+            roofNode: getNode(named: "Music_Roof"),
+            hitRect: getRect(named: "Music_HitBox"))
+        
+        var musicBldg_F1 = Floor(svgNode: getNode(named: "Music_F1"))
+        musicBldg.floors.append(musicBldg_F1)
+        musicBldg_F1.svgNode.opacity = 0
+        
+        var middleBldg = Building(named: "Middle School",
+            roofNode: getNode(named: "Middle_Roof"),
+            hitRect: getRect(named: "Middle_HitBox"))
+        
+        var middleBldg_F1 = Floor(svgNode: getNode(named: "Middle_F1"))
+        var middleBldg_F2 = Floor(svgNode: getNode(named: "Middle_F2"))
+        middleBldg.floors.append(middleBldg_F1)
+        middleBldg.floors.append(middleBldg_F2)
+        middleBldg_F1.svgNode.opacity = 0
+        middleBldg_F2.svgNode.opacity = 0
+        
+        var mathBldg = Building(named: "Math/Science Building",
+            roofNode: getNode(named: "Math_Roof"),
+            hitRect: getRect(named: "Math_HitBox"))
+        
+        var mathBldg_F1 = Floor(svgNode: getNode(named: "Math_F1"))
+        var mathBldg_F2 = Floor(svgNode: getNode(named: "Math_F2"))
+        mathBldg.floors.append(mathBldg_F1)
+        mathBldg.floors.append(mathBldg_F2)
+        mathBldg_F1.svgNode.opacity = 0
+        mathBldg_F2.svgNode.opacity = 0
+        
+        var pavilionBldg = Building(named: "Pavilion",
+            roofNode: getNode(named: "Pavilion_Roof"),
+            hitRect: getRect(named: "Pavilion_HitBox"))
+        
+        var pavilionBldg_F1 = Floor(svgNode: getNode(named: "Pavilion_F1"))
+        pavilionBldg.floors.append(pavilionBldg_F1)
+        pavilionBldg_F1.svgNode.opacity = 0
+        
+        var gymBldg = Building(named: "Field House/Gym",
+            roofNode: getNode(named: "Gym_Roof"),
+            hitRect: getRect(named: "Gym_HitBox"))
+        
+        var gymBldg_F1 = Floor(svgNode: getNode(named: "Gym_F1"))
+        gymBldg.floors.append(gymBldg_F1)
+        gymBldg_F1.svgNode.opacity = 0
+        
+        buildings.append(mainBldg)
+        buildings.append(communityBldg)
+        buildings.append(artBldg)
+        buildings.append(musicBldg)
+        buildings.append(middleBldg)
+        buildings.append(mathBldg)
+        buildings.append(pavilionBldg)
+        buildings.append(gymBldg)
         
         getNode(named: "Main_HitBox").opacity = 0
         getNode(named: "Community_HitBox").opacity = 0
@@ -232,15 +257,17 @@ struct MapView: View {
         if activeBuilding !== tappedBuilding {
             
             // Show the roof of the building that was previously active
-            if activeBuilding != nil {
-                activeBuilding?.roofNode.opacity = 1
+            if activeBuilding !== nil {
+                activeBuilding!.roofNode.opacity = 1
+                activeBuilding!.floors[0].svgNode.opacity = 0
             }
             
             activeBuilding = tappedBuilding
             
             // Hide the roof that is now currently active
-            if tappedBuilding != nil {
-                tappedBuilding?.roofNode.opacity = 0
+            if tappedBuilding !== nil {
+                tappedBuilding!.roofNode.opacity = 0
+                tappedBuilding!.floors[0].svgNode.opacity = 1
             }
         }
         
@@ -273,43 +300,66 @@ struct MapView: View {
     var body: some View {
         ZStack {
             Color("MapBackground", bundle: Bundle.main)
+                .ignoresSafeArea()
             
-            // This is the actual SVG that is being rendered
-            svgView
-                .transformEffect(transform)
-                .background(GeometryReader { geometry in
-                    Color.clear
-                        .onAppear {
-                            DispatchQueue.main.async {
-                                viewSize = geometry.size
-                                
-                                // Calculate the size at which the SVG is being rendered at
-                                // without any transformations applied (pan/zoom)
-                                svgDisplayScale = viewSize.width / Self.svgSize.width
-                                svgDisplaySize = CGSize(
-                                    width: Self.svgSize.width * svgDisplayScale,
-                                    height: Self.svgSize.height * svgDisplayScale)
-                            }
-                        }
-                })
-
-            // Draw the names of the buildings ontop with a canvas
-            Canvas { context, _ in
+            ZStack {
                 
-                for building in buildings {
+                // This is the actual SVG that is being rendered
+                svgView
+                    .transformEffect(transform)
+                    .background(GeometryReader { geometry in
+                        Color.clear
+                            .onAppear {
+                                DispatchQueue.main.async {
+                                    viewSize = geometry.size
+                                    //geometry.safeAreaRegions
+                                    
+                                    // Calculate the size at which the SVG is being rendered at
+                                    // without any transformations applied (pan/zoom)
+                                    svgDisplayScale = viewSize.width / Self.svgSize.width
+                                    svgDisplaySize = CGSize(
+                                        width: Self.svgSize.width * svgDisplayScale,
+                                        height: Self.svgSize.height * svgDisplayScale)
+                                }
+                            }
+                    })
+
+                // Draw the names of the buildings ontop with a canvas
+                Canvas { context, _ in
                     
-                    let mapPoint = CGPoint(
-                        x: building.hitRect.midX,
-                        y: building.hitRect.midY)
-                    
-                    let screenPoint = MapToScreenSpace(mapPoint)
-                    
-                    drawText(&context, building.name, screenPoint)
+                    for building in buildings {
+                        
+                        if building === activeBuilding {
+                            continue
+                        }
+                        
+                        let mapPoint = CGPoint(
+                            x: building.hitRect.midX,
+                            y: building.hitRect.midY)
+                        
+                        let screenPoint = MapToScreenSpace(mapPoint)
+                        
+                        drawText(&context, building.name, screenPoint)
+                    }
                 }
+            }
+            
+            if activeBuilding !== nil {
+                VStack {
+                    RoundedRectangle(cornerSize: CGSize(width: 15, height: 15))
+                        .fill(Color.white)
+                        .frame(width: 300, height: 80)
+                        .overlay {
+                            Text(activeBuilding!.name)
+                                .font(.system(size: 20, weight: .bold))
+                        }
+                    
+                    Spacer()
+                }
+                .padding()
             }
         }
         .transformGesture(transform: transform, draggingDisabled: true, onTap: onTapped)
-        .ignoresSafeArea()
     }
 }
 

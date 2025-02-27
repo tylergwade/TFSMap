@@ -243,25 +243,36 @@
           <rect x="698.912" y="519.586" width="17.274" height="8.617" style="fill: #bababa;"/>
         </g>
         <g id="Walls-2" data-name="Walls">
-          <rect x="698.72" y="528.199" width="40.6" height=".4"/>
-          <rect x="683.11" y="520.699" width="16" height=".39"/>
-          <rect x="698.72" y="520.699" width=".39" height="7.9"/>
+          <rect x="713.012" y="528.199" width="4.833" height=".4"/>
+          <rect x="698.827" y="528.199" width="9.88" height=".4"/>
+          <rect x="721.387" y="528.199" width="8.232" height=".4"/>
+          <rect x="725.825" y="509.558" width=".4" height="18.64"/>
+          <rect x="732.887" y="528.199" width="6.758" height=".4"/>
+          <rect x="683.11" y="520.699" width="3.366" height=".39"/>
+          <rect x="690.855" y="520.699" width="8.255" height=".39"/>
+          <rect x="698.72" y="511.4" width=".39" height="17.199"/>
           <rect x="698.72" y="542.539" width=".39" height="19.43"/>
           <rect x="714.45" y="542.539" width=".4" height="37.79"/>
           <rect x="716.19" y="490.789" width=".39" height="37.54"/>
           <rect x="835.54" y="490.559" width=".39" height="14.79"/>
           <rect x="835.54" y="505.159" width="41.4" height=".39"/>
-          <rect x="683.13" y="549.649" width="15.98" height=".39"/>
+          <rect x="683.13" y="549.649" width="9.854" height=".39"/>
+          <rect x="696.836" y="549.649" width="2.167" height=".39"/>
           <rect x="683.28" y="561.969" width="15.83" height=".4"/>
-          <rect x="698.72" y="542.539" width="40.6" height=".39"/>
+          <rect x="705.79" y="542.539" width="17.505" height=".39"/>
+          <rect x="727.975" y="542.539" width="11.806" height=".39"/>
+          <rect x="698.72" y="542.539" width="3.292" height=".39"/>
           <rect x="682.53" y="490.099" width="57.51" height=".78"/>
-          <rect x="682.53" y="490.099" width=".78" height="90.94"/>
-          <rect x="752.7" y="490.099" width=".79" height="90.94"/>
           <rect x="876.87" y="490.099" width=".79" height="90.94"/>
           <rect x="752.7" y="490.099" width="124.96" height=".78"/>
-          <rect x="752.7" y="580.579" width="124.96" height=".78"/>
-          <rect x="739.25" y="490.099" width=".79" height="90.94"/>
+          <rect x="752.305" y="580.579" width="125.355" height=".78"/>
+          <rect x="739.25" y="490.099" width=".79" height="41.553"/>
+          <rect x="739.25" y="539.717" width=".79" height="41.322"/>
           <rect x="682.53" y="580.249" width="57.51" height=".79"/>
+          <rect x="752.305" y="490.099" width=".79" height="41.553"/>
+          <rect x="752.305" y="539.717" width=".79" height="41.322"/>
+          <rect x="682.53" y="490.085" width=".79" height="41.553"/>
+          <rect x="682.53" y="539.703" width=".79" height="41.322"/>
         </g>
       </g>
       <g id="Gym_Roof">
@@ -293,19 +304,34 @@
           <rect x="220.247" y="112.728" width="20.04" height="13.268" style="fill: #cbcbcb;"/>
         </g>
         <g id="Walls-3" data-name="Walls">
+          <rect x="247.231" y="143.879" width="28.721" height=".22" style="fill: #4d4d4d;"/>
+          <rect x="281.82" y="107.033" width=".21" height="28.72" style="fill: #4d4d4d;"/>
           <rect x="239.73" y="89.709" width="42.59" height=".78"/>
           <rect x="219.86" y="94.299" width="20.43" height=".79"/>
           <rect x="219.86" y="137.069" width="20.43" height=".78"/>
           <rect x="239.73" y="137.069" width=".78" height="7.28"/>
           <rect x="239.73" y="89.709" width=".78" height="5.38"/>
-          <rect x="239.73" y="143.599" width="42.59" height=".78"/>
-          <rect x="281.53" y="89.729" width=".79" height="54.65"/>
-          <rect x="219.86" y="94.299" width=".78" height="43.55"/>
-          <rect x="240.11" y="95.089" width=".4" height="41.98"/>
-          <rect x="220.58" y="112.529" width="19.53" height=".4"/>
+          <rect x="239.73" y="143.599" width="1.279" height=".78"/>
+          <rect x="245.48" y="143.599" width="1.751" height=".78"/>
+          <rect x="255.702" y="143.599" width="1.751" height=".78"/>
+          <rect x="265.924" y="143.599" width="1.751" height=".78"/>
+          <rect x="275.952" y="143.599" width="1.751" height=".78"/>
+          <rect x="281.53" y="135.753" width=".79" height="8.626"/>
+          <rect x="281.53" y="119.985" width=".79" height="1.778"/>
+          <rect x="281.53" y="100.807" width=".79" height="6.226"/>
+          <rect x="281.53" y="90.489" width=".79" height="3.194"/>
+          <rect x="219.86" y="123.192" width=".78" height="14.657"/>
+          <rect x="219.86" y="94.299" width=".78" height="21.856"/>
+          <rect x="240.11" y="124.356" width=".4" height="12.713"/>
+          <rect x="240.11" y="95.089" width=".4" height="19.397"/>
+          <rect x="220.58" y="112.529" width="6.637" height=".4"/>
+          <rect x="232.897" y="112.529" width="7.213" height=".4"/>
           <rect x="232.47" y="125.609" width=".39" height="12"/>
           <rect x="225.71" y="125.609" width=".39" height="11.85"/>
-          <rect x="220.58" y="125.609" width="19.53" height=".39"/>
+          <rect x="220.58" y="125.609" width=".665" height=".39"/>
+          <rect x="224.941" y="125.609" width="1.748" height=".39"/>
+          <rect x="231.276" y="125.609" width="2.612" height=".39"/>
+          <rect x="237.763" y="125.609" width="2.421" height=".39"/>
         </g>
       </g>
       <g id="Pavilion_Roof">
@@ -319,7 +345,7 @@
       <g id="Math_Shadow">
         <polygon points="447.753 80.869 440.768 87.855 440.768 103.416 427.17 100.869 420.115 107.924 420.115 151.647 420.11 158.707 440.725 158.675 440.666 165.29 523.421 165.29 532.399 165.29 539.486 158.202 447.753 80.869" style="opacity: .3;"/>
       </g>
-      <g id="Math_Floor1">
+      <g id="Math_F1">
         <g id="Rooms-4" data-name="Rooms">
           <rect x="427.954" y="131.321" width="13.097" height="12.876" style="fill: #525252;"/>
           <rect x="453.706" y="81.635" width="38.371" height="39.133" style="fill: #ccc;"/>
@@ -361,39 +387,50 @@
         <g id="Walls-4" data-name="Walls">
           <rect x="427.17" y="100.849" width=".78" height="50.78"/>
           <rect x="447.754" y="150.846" width=".784" height="6.542"/>
-          <rect x="427.17" y="100.849" width="21.37" height=".79"/>
+          <rect x="427.17" y="100.849" width="6.596" height=".79"/>
+          <rect x="440.562" y="100.849" width="7.978" height=".79"/>
           <rect x="448.54" y="80.849" width="44.32" height=".79"/>
           <rect x="492.08" y="81.639" width=".78" height="7.2"/>
           <rect x="492.86" y="88.049" width="46.63" height=".79"/>
-          <rect x="538.7" y="88.839" width=".79" height="69.35"/>
+          <rect x="538.7" y="129.061" width=".79" height="29.127"/>
+          <rect x="538.7" y="88.839" width=".79" height="34.077"/>
           <rect x="447.75" y="157.399" width="91.74" height=".79"/>
           <rect x="427.95" y="150.849" width="20.59" height=".78"/>
           <rect x="447.75" y="80.849" width=".79" height="20.57"/>
-          <rect x="448.14" y="130.929" width="90.54" height=".39"/>
-          <rect x="453.31" y="120.769" width="85.37" height=".39"/>
-          <rect x="492.07" y="88.489" width=".4" height="32.25"/>
+          <rect x="447.411" y="130.929" width="38.389" height=".39"/>
+          <rect x="489.157" y="130.929" width="5.27" height=".39"/>
+          <rect x="535.272" y="130.929" width="3.823" height=".39"/>
+          <rect x="535.272" y="120.839" width="3.823" height=".39"/>
+          <rect x="497.86" y="130.929" width="33.641" height=".39"/>
+          <rect x="453.31" y="120.769" width="78.243" height=".39"/>
+          <rect x="492.07" y="96.357" width=".4" height="24.382"/>
+          <rect x="492.07" y="88.63" width=".4" height="2.839"/>
           <rect x="529.82" y="112.379" width=".4" height="8.46"/>
           <rect x="530.22" y="112.379" width="8.61" height=".39"/>
-          <rect x="448.54" y="108.349" width="5.09" height=".39"/>
+          <rect x="448.54" y="108.349" width=".786" height=".39"/>
+          <rect x="452.593" y="108.349" width=".917" height=".39"/>
           <rect x="448.15" y="101.639" width=".39" height="19.13"/>
           <rect x="453.31" y="91.409" width=".4" height="29.36"/>
           <rect x="447.81" y="91.079" width="10.16" height=".39"/>
-          <rect x="457.58" y="81.609" width=".39" height="9.85"/>
+          <rect x="457.58" y="81.609" width=".39" height="5.049"/>
+          <rect x="457.58" y="89.917" width=".39" height="1.552"/>
           <rect x="448.15" y="130.929" width=".39" height="19.92"/>
           <rect x="440.86" y="130.929" width=".4" height="13.27"/>
-          <rect x="427.95" y="120.769" width="20.59" height=".39"/>
-          <rect x="427.95" y="130.929" width="20.19" height=".39"/>
+          <rect x="427.95" y="120.769" width="14.752" height=".39"/>
+          <rect x="446.091" y="120.769" width="2.449" height=".39"/>
+          <rect x="427.95" y="130.929" width="14.12" height=".39"/>
           <rect x="433.75" y="123.489" width=".39" height="5.96"/>
-          <rect x="436.19" y="121.099" width=".39" height="4.06"/>
-          <rect x="436.192" y="126.78" width=".392" height="4.54"/>
+          <rect x="436.19" y="121.099" width=".39" height="3.696"/>
+          <rect x="436.192" y="127.817" width=".392" height="3.504"/>
           <rect x="427.95" y="126.259" width="6.15" height=".39"/>
-          <rect x="492.12" y="131.169" width=".39" height="26.4"/>
+          <rect x="492.12" y="131.169" width=".39" height="21.464"/>
+          <rect x="492.12" y="156.648" width=".39" height="1.145"/>
           <rect x="427.27" y="141.279" width="7.42" height=".4"/>
           <rect x="434.29" y="143.809" width="6.97" height=".39"/>
           <rect x="434.29" y="141.419" width=".4" height="2.78"/>
         </g>
       </g>
-      <g id="Math_Floor2">
+      <g id="Math_F2">
         <g id="Rooms-5" data-name="Rooms">
           <rect x="448.537" y="131.321" width="10.047" height="26.098" style="fill: #8be6ff;"/>
           <rect x="458.976" y="131.321" width="23.975" height="26.098" style="fill: #cbcbcb;"/>
@@ -427,27 +464,40 @@
           </g>
         </g>
         <g id="Walls-5" data-name="Walls">
-          <rect x="427.31" y="110.389" width="20.84" height=".4"/>
-          <rect x="427.28" y="141.279" width="7.42" height=".4"/>
+          <rect x="431.763" y="110.389" width="16.387" height=".4"/>
+          <rect x="427.324" y="110.389" width="1.222" height=".4"/>
+          <rect x="427.28" y="141.279" width="1.661" height=".4"/>
+          <rect x="432.936" y="141.279" width="1.764" height=".4"/>
           <rect x="434.31" y="143.809" width="13.84" height=".39"/>
-          <rect x="448.15" y="130.969" width="90.55" height=".39"/>
+          <rect x="534.207" y="130.969" width="4.493" height=".39"/>
+          <rect x="505.813" y="130.969" width="5.398" height=".39"/>
+          <rect x="514.548" y="130.969" width="16.127" height=".39"/>
+          <rect x="448.15" y="130.969" width="6.553" height=".39"/>
+          <rect x="457.882" y="130.969" width="9.939" height=".39"/>
+          <rect x="471.24" y="130.969" width="30.703" height=".39"/>
           <rect x="434.31" y="141.419" width=".39" height="2.78"/>
           <rect x="448.15" y="131.319" width=".39" height="19.54"/>
           <rect x="448.15" y="101.649" width=".39" height="19.51"/>
           <rect x="448.54" y="120.779" width="17.21" height=".39"/>
           <rect x="448.54" y="111.229" width="17.21" height=".39"/>
-          <rect x="465.36" y="111.619" width=".39" height="9.16"/>
+          <rect x="465.36" y="116.969" width=".39" height="3.81"/>
+          <rect x="465.36" y="111.267" width=".39" height="3.122"/>
           <rect x="483.17" y="111.619" width=".4" height="9.16"/>
-          <rect x="473.6" y="111.619" width=".4" height="9.16"/>
-          <rect x="469.482" y="114.155" width=".392" height="7.852" transform="translate(587.758 -351.597) rotate(90)"/>
-          <rect x="473.6" y="111.229" width="18.7" height=".39"/>
-          <rect x="492.08" y="88.859" width=".39" height="31.92"/>
+          <rect x="473.6" y="116.969" width=".4" height="3.81"/>
+          <rect x="466.277" y="117.36" width=".392" height="1.442" transform="translate(584.553 -348.392) rotate(90)"/>
+          <rect x="472.683" y="117.36" width=".392" height="1.442" transform="translate(590.959 -354.798) rotate(90)"/>
+          <rect x="473.6" y="111.229" width="10.669" height=".39"/>
+          <rect x="487.116" y="111.229" width="5.167" height=".39"/>
+          <rect x="492.08" y="88.859" width=".39" height="15.596"/>
+          <rect x="492.08" y="108.399" width=".39" height="12.769"/>
           <rect x="458.58" y="131.319" width=".4" height="26.1"/>
           <rect x="482.95" y="131.319" width=".39" height="26.1"/>
           <rect x="507.42" y="131.319" width=".39" height="26.1"/>
           <rect x="529.37" y="131.319" width=".39" height="26.1"/>
           <rect x="515.02" y="88.859" width=".39" height="31.92"/>
-          <rect x="473.6" y="120.779" width="65.08" height=".39"/>
+          <rect x="473.6" y="120.779" width="20.113" height=".39"/>
+          <rect x="497.394" y="120.779" width="25.146" height=".39"/>
+          <rect x="526.926" y="120.779" width="12.297" height=".39"/>
           <rect x="427.17" y="100.869" width=".78" height="50.78"/>
           <rect x="437.462" y="90.577" width=".784" height="21.367" transform="translate(539.115 -336.593) rotate(90)"/>
           <rect x="448.54" y="80.869" width="44.32" height=".78"/>
@@ -458,6 +508,7 @@
           <rect x="447.75" y="151.649" width=".79" height="5.77"/>
           <rect x="427.95" y="150.859" width="20.59" height=".79"/>
           <rect x="447.75" y="80.869" width=".79" height="20.57"/>
+          <rect x="473.605" y="111.267" width=".39" height="3.122"/>
         </g>
       </g>
       <g id="Math_Roof">
@@ -526,36 +577,45 @@
           <rect x="475.327" y="257.815" width="12.704" height="13.025" style="fill: #b0b0b0;"/>
           <rect x="475.327" y="270.754" width="19.212" height="15.105" style="fill: #b0b0b0;"/>
           <rect x="475.327" y="285.871" width="19.212" height="15.509" style="fill: #b0b0b0;"/>
-          <rect x="527.032" y="248.476" width="25.454" height="21.907" style="fill: #e5e5e5;"/>
+          <rect x="527.032" y="248.476" width="25.454" height="22.278" style="fill: #e5e5e5;"/>
           <rect x="496.324" y="248.867" width="30.707" height="21.886" style="fill: #e5e5e5;"/>
           <rect x="552.681" y="248.867" width="8.763" height="6.096" style="fill: #e5e5e5;"/>
           <rect x="552.681" y="255.355" width="8.763" height="10.266" style="fill: #bababa;"/>
           <rect x="561.608" y="239.019" width="29.726" height="22.433" style="fill: #e5e5e5;"/>
         </g>
         <g id="Walls-6" data-name="Walls">
-          <rect x="496.13" y="248.869" width=".39" height="21.69"/>
-          <rect x="484.569" y="261.371" width=".392" height="18.764" transform="translate(755.518 -214.011) rotate(90)"/>
+          <rect x="496.13" y="255.551" width=".39" height="15.007"/>
+          <rect x="496.13" y="248.639" width=".39" height="1.153"/>
+          <rect x="475.38" y="270.559" width="18.77" height=".39"/>
           <rect x="475.38" y="285.859" width="18.77" height=".39"/>
-          <rect x="488.031" y="257.815" width=".392" height="12.939" transform="translate(976.454 528.568) rotate(180)"/>
-          <rect x="488.42" y="262.739" width="7.83" height=".39"/>
-          <rect x="526.64" y="248.869" width=".39" height="21.69"/>
-          <rect x="552.49" y="248.869" width=".39" height="16.36"/>
-          <rect x="561.216" y="248.867" width=".392" height="12.584"/>
-          <rect x="552.68" y="254.959" width="8.71" height=".4"/>
+          <rect x="488.03" y="257.819" width=".39" height="12.93"/>
+          <rect x="488.42" y="262.739" width="2.013" height=".39"/>
+          <rect x="494.81" y="262.739" width="1.381" height=".39"/>
+          <rect x="552.49" y="254.556" width=".39" height="10.673"/>
+          <rect x="561.216" y="254.556" width=".392" height="6.895"/>
+          <rect x="552.68" y="256.848" width="1.204" height=".4"/>
+          <rect x="560.179" y="256.848" width="1.233" height=".4"/>
           <rect x="487.64" y="248.089" width="73.8" height=".78"/>
           <rect x="494.15" y="270.559" width="59.12" height=".79"/>
-          <rect x="494.15" y="270.789" width=".78" height="30.98"/>
-          <rect x="474.94" y="257.029" width=".78" height="44.74"/>
+          <rect x="494.15" y="270.789" width=".78" height="20.373"/>
+          <rect x="494.15" y="295.662" width=".78" height="6.107"/>
+          <rect x="474.94" y="281.81" width=".78" height="19.959"/>
+          <rect x="474.94" y="257.029" width=".78" height="19.959"/>
           <rect x="560.82" y="238.239" width="31.12" height=".78"/>
           <rect x="474.94" y="257.029" width="13.48" height=".79"/>
           <rect x="552.49" y="265.229" width="9.33" height=".78"/>
           <rect x="561.22" y="261.449" width=".78" height="4.56"/>
           <rect x="560.82" y="238.239" width=".79" height="10.63"/>
           <rect x="552.49" y="265.429" width=".78" height="5.92"/>
-          <rect x="487.64" y="248.089" width=".78" height="9.51"/>
+          <rect x="487.64" y="255.497" width=".78" height="2.101"/>
+          <rect x="487.64" y="248.089" width=".78" height="2.101"/>
           <rect x="561.22" y="261.449" width="30.72" height=".79"/>
           <rect x="591.15" y="238.249" width=".79" height="23.96"/>
           <rect x="474.94" y="300.989" width="19.99" height=".78"/>
+          <rect x="526.64" y="255.551" width=".39" height="15.007"/>
+          <rect x="526.64" y="248.639" width=".39" height="1.153"/>
+          <rect x="552.485" y="248.639" width=".39" height="1.153"/>
+          <rect x="561.195" y="248.639" width=".39" height="1.153"/>
         </g>
       </g>
       <g id="Art_F2">
@@ -611,22 +671,29 @@
           <rect x="431.87" y="198.929" width="23.82" height=".78"/>
           <rect x="431.87" y="198.929" width=".78" height="25.64"/>
           <rect x="431.87" y="223.779" width="88.08" height=".79"/>
-          <rect x="503.31" y="210.219" width=".39" height="13.56"/>
+          <rect x="503.31" y="210.219" width=".39" height="9.556"/>
+          <rect x="503.31" y="222.833" width=".39" height="1.548"/>
           <rect x="453.999" y="206.665" width=".392" height="3.631" transform="translate(908.391 416.961) rotate(180)"/>
           <rect x="438.82" y="206.669" width=".4" height="11.34"/>
-          <rect x="481.16" y="194.089" width=".39" height="29.69"/>
-          <rect x="470.612" y="207.26" width=".392" height="20.705" transform="translate(253.196 688.42) rotate(-90)"/>
+          <rect x="481.16" y="194.089" width=".39" height="24.632"/>
+          <rect x="481.16" y="222.72" width=".39" height="1.7"/>
+          <rect x="469.183" y="215.392" width=".392" height="4.439" transform="translate(251.767 686.991) rotate(-90)"/>
+          <rect x="462.158" y="215.695" width=".392" height="3.833" transform="translate(244.742 679.966) rotate(-90)"/>
+          <rect x="478.306" y="214.735" width=".392" height="5.754" transform="translate(260.89 696.114) rotate(-90)"/>
           <rect x="453.999" y="214.364" width=".392" height="9.808"/>
-          <rect x="452.113" y="208.41" width=".392" height="3.38" transform="translate(242.209 662.409) rotate(-90)"/>
           <rect x="438.82" y="206.669" width="15.18" height=".39"/>
           <rect x="438.82" y="217.609" width="15.18" height=".4"/>
-          <rect x="452.309" y="212.674" width=".392" height="3.772" transform="translate(237.945 667.065) rotate(-90)"/>
+          <rect x="450.819" y="214.164" width=".392" height=".792" transform="translate(236.455 665.575) rotate(-90)"/>
+          <rect x="453.803" y="214.164" width=".392" height=".792" transform="translate(239.439 668.559) rotate(-90)"/>
           <rect x="439.02" y="212.089" width="11.79" height=".39"/>
           <rect x="450.62" y="210.299" width=".39" height="4.36"/>
           <rect x="460.46" y="208.509" width=".39" height="9.3"/>
           <rect x="469.85" y="208.509" width=".39" height="9.3"/>
           <rect x="455.3" y="199.713" width=".392" height="8.794"/>
-          <rect x="467.507" y="194.607" width=".392" height="27.407" transform="translate(676.013 -259.392) rotate(90)"/>
+          <rect x="470.354" y="197.455" width=".392" height="21.711" transform="translate(678.861 -262.24) rotate(90)"/>
+          <rect x="455.081" y="207.427" width=".392" height="1.772" transform="translate(663.59 -246.965) rotate(90)"/>
+          <rect x="450.82" y="209.707" width=".392" height=".792" transform="translate(240.913 661.119) rotate(-90)"/>
+          <rect x="453.805" y="209.707" width=".392" height=".792" transform="translate(243.898 664.103) rotate(-90)"/>
         </g>
       </g>
       <g id="Middle_F2">
@@ -639,10 +706,14 @@
           <rect x="483.695" y="194.092" width="19.622" height="29.693" style="fill: #cbcbcb;"/>
         </g>
         <g id="Walls-9" data-name="Walls">
-          <rect x="483.3" y="194.089" width=".39" height="29.7"/>
-          <rect x="455.3" y="199.719" width=".39" height="25.24"/>
-          <rect x="455.67" y="216.119" width="27.63" height=".39"/>
-          <rect x="432.65" y="224.959" width="23.04" height=".39"/>
+          <rect x="483.3" y="194.089" width=".39" height="23.279"/>
+          <rect x="483.3" y="222.77" width=".39" height="1.292"/>
+          <rect x="455.3" y="199.719" width=".39" height="18.01"/>
+          <rect x="455.304" y="222.944" width=".39" height="2.405"/>
+          <rect x="462.867" y="216.119" width="20.433" height=".39"/>
+          <rect x="455.69" y="216.119" width="2.628" height=".39"/>
+          <rect x="432.65" y="224.959" width="12.358" height=".39"/>
+          <rect x="449.802" y="224.959" width="5.891" height=".39"/>
           <rect x="459.98" y="219.499" width=".392" height="8.964" transform="translate(684.156 -236.195) rotate(90)"/>
           <rect x="503.32" y="193.309" width=".78" height="30.48"/>
           <rect x="454.91" y="193.309" width="48.41" height=".78"/>
@@ -651,9 +722,11 @@
           <rect x="431.87" y="198.939" width=".78" height="26.34"/>
           <rect x="464.66" y="223.789" width="39.44" height=".78"/>
           <rect x="464.66" y="223.809" width=".78" height="28.68"/>
-          <rect x="426.54" y="251.709" width="38.9" height=".78"/>
-          <rect x="426.54" y="224.569" width=".78" height="27.14"/>
-          <rect x="429.204" y="221.905" width=".784" height="6.111" transform="translate(204.635 654.556) rotate(-90)"/>
+          <rect x="426.54" y="251.709" width="16.107" height=".78"/>
+          <rect x="449.99" y="251.709" width="15.45" height=".78"/>
+          <rect x="426.54" y="232.804" width=".78" height="18.905"/>
+          <rect x="426.54" y="224.569" width=".78" height="2.318"/>
+          <rect x="426.54" y="224.569" width="6.11" height=".78"/>
         </g>
       </g>
       <g id="Middle_Roof">
@@ -749,7 +822,7 @@
           <rect x="231.71" y="232.438" width="13.552" height="11.041" style="fill: #9e9e9e;"/>
           <rect x="240.907" y="238.268" width="4.355" height="7.823" style="fill: #9e9e9e;"/>
           <rect x="207.414" y="169.923" width="14.655" height="9.013" style="fill: #919191;"/>
-          <rect x="222.461" y="169.923" width="9.013" height="9.013" style="fill: #919191;"/>
+          <rect x="222.461" y="169.923" width="9.244" height="9.013" style="fill: #919191;"/>
           <rect x="207.806" y="207.979" width="23.896" height="9.013" style="fill: #999;"/>
           <rect x="207.904" y="179.328" width="22.153" height="28.26" style="fill: #b0b0b0;"/>
           <rect x="241.446" y="227.564" width="3.939" height="10.257" style="fill: #cbcbcb;"/>
@@ -757,7 +830,7 @@
         <g id="Walls-11" data-name="Walls">
           <rect x="231.9" y="216.689" width="51.22" height=".4"/>
           <rect x="232.1" y="223.869" width="13.29" height=".39"/>
-          <rect x="236.578" y="227.782" width=".392" height="9.344" transform="translate(469.228 -4.32) rotate(90)"/>
+          <rect x="232.1" y="232.259" width="9.35" height=".39"/>
           <rect x="207.81" y="178.939" width="24.09" height=".39"/>
           <rect x="207.81" y="207.589" width="24.09" height=".39"/>
           <rect x="222.07" y="169.919" width=".39" height="9.02"/>
@@ -767,19 +840,19 @@
           <rect x="219.17" y="204.546" width=".784" height="25.081" transform="translate(436.648 -2.476) rotate(90)"/>
           <rect x="261.82" y="224.394" width=".784" height="43.393" transform="translate(508.303 -16.121) rotate(90)"/>
           <rect x="235.91" y="238.873" width=".784" height="9.994" transform="translate(480.173 7.569) rotate(90)"/>
-          <rect x="240.516" y="243.796" width=".784" height="2.642" transform="translate(481.815 490.234) rotate(180)"/>
-          <rect x="231.318" y="217.282" width=".784" height="26.981" transform="translate(463.42 461.544) rotate(180)"/>
+          <rect x="240.52" y="243.799" width=".78" height="2.64"/>
+          <rect x="231.32" y="217.279" width=".78" height="26.98"/>
           <rect x="283.12" y="216.699" width="5.68" height=".78"/>
           <rect x="207.02" y="169.139" width=".79" height="48.34"/>
           <rect x="288.02" y="169.139" width=".78" height="48.34"/>
-          <rect x="283.125" y="216.811" width=".784" height="29.672" transform="translate(567.034 463.294) rotate(180)"/>
+          <rect x="283.12" y="216.809" width=".79" height="29.67"/>
           <rect x="273.1" y="235.639" width=".4" height="10.07"/>
           <rect x="255.101" y="226.469" width=".392" height="19.828" transform="translate(491.681 -18.914) rotate(90)"/>
           <rect x="244.99" y="217.089" width=".39" height="13.01"/>
-          <rect x="244.99" y="234.589" width=".39" height="11.03"/>
+          <rect x="244.99" y="234.589" width=".39" height="11.28"/>
           <rect x="241.25" y="227.369" width=".39" height="10.65"/>
           <rect x="243.256" y="236.01" width=".392" height="3.62" transform="translate(5.632 481.273) rotate(-90)"/>
-          <rect x="243.256" y="225.754" width=".392" height="3.62" transform="translate(15.888 471.016) rotate(-90)"/>
+          <rect x="241.64" y="227.369" width="3.62" height=".39"/>
           <rect x="230.06" y="179.329" width=".39" height="28.45"/>
         </g>
       </g>
@@ -901,18 +974,18 @@
         <g id="Main_F1_Walls">
           <polygon points="366.29 312.259 366.29 312.649 366.49 312.649 366.49 313.409 366.1 313.409 366.1 293.749 366.49 293.749 366.49 312.259 366.29 312.259" style="fill: #1a1a1a;"/>
           <rect x="366.29" y="312.259" width=".2" height=".39" style="fill: #1a1a1a;"/>
-          <rect x="366.1" y="317.339" width=".39" height="1.01" style="fill: #1a1a1a;"/>
+          <rect x="366.1" y="317.603" width=".39" height=".745" style="fill: #1a1a1a;"/>
           <rect x="366.1" y="318.349" width=".39" height=".78" style="fill: #1a1a1a;"/>
           <rect x="410.41" y="292.139" width=".39" height="15.65" style="fill: #1a1a1a;"/>
-          <rect x="437.736" y="286.423" width=".392" height="16.931" style="fill: #1a1a1a;"/>
+          <rect x="437.736" y="286.423" width=".392" height="17.186" style="fill: #1a1a1a;"/>
           <rect x="439.027" y="301.732" width=".392" height="2.581" transform="translate(742.244 -136.201) rotate(90)" style="fill: #1a1a1a;"/>
-          <rect x="437.736" y="307.437" width=".392" height=".528" transform="translate(875.865 615.402) rotate(180)" style="fill: #1a1a1a;"/>
           <rect x="444.479" y="301.718" width=".392" height="2.607" transform="translate(747.696 -141.653) rotate(90)" style="fill: #1a1a1a;"/>
           <rect x="445.71" y="289.859" width=".39" height="13.36" style="fill: #1a1a1a;"/>
           <rect x="445.71" y="286.289" width=".39" height="1.18" style="fill: #1a1a1a;"/>
           <rect x="437.93" y="294.529" width="7.98" height=".39" style="fill: #1a1a1a;"/>
           <rect x="445.91" y="291.599" width="2.43" height=".39" style="fill: #1a1a1a;"/>
-          <rect x="452.93" y="289.809" width="9.92" height=".39" style="fill: #1a1a1a;"/>
+          <rect x="452.93" y="289.809" width="5.721" height=".39" style="fill: #1a1a1a;"/>
+          <rect x="461.962" y="289.809" width="1.588" height=".39" style="fill: #1a1a1a;"/>
           <rect x="456.19" y="300.319" width="6.69" height=".4" style="fill: #1a1a1a;"/>
           <rect x="453.1" y="300.319" width=".44" height=".4" style="fill: #1a1a1a;"/>
           <rect x="452.77" y="300.323" width=".392" height="7.885" style="fill: #1a1a1a;"/>
@@ -922,6 +995,7 @@
           <rect x="388.43" y="318.559" width="21.98" height=".39" style="fill: #1a1a1a;"/>
           <rect x="388.95" y="295.609" width=".39" height="17.83" style="fill: #1a1a1a;"/>
           <rect x="388.93" y="316.999" width=".39" height="1.56" style="fill: #1a1a1a;"/>
+          <rect x="403.264" y="310.814" width=".39" height="7.744" style="fill: #1a1a1a;"/>
           <rect x="389.34" y="295.219" width="21.07" height=".39" style="fill: #1a1a1a;"/>
           <rect x="388.95" y="295.219" width=".39" height=".39" style="fill: #1a1a1a;"/>
           <rect x="388.93" y="295.219" width=".02" height=".39" style="fill: #1a1a1a;"/>
@@ -929,6 +1003,9 @@
           <rect x="410.406" y="286.366" width=".392" height="2.275" style="fill: #1a1a1a;"/>
           <rect x="366.29" y="312.259" width="6.3" height=".39" style="fill: #1a1a1a;"/>
           <rect x="376.26" y="312.259" width="6.15" height=".39" style="fill: #1a1a1a;"/>
+          <rect x="389.32" y="310.424" width="7.146" height=".39" style="fill: #1a1a1a;"/>
+          <rect x="408.249" y="310.424" width="2.161" height=".39" style="fill: #1a1a1a;"/>
+          <rect x="403.264" y="310.424" width="1.277" height=".39" style="fill: #1a1a1a;"/>
           <rect x="382.41" y="312.259" width=".39" height=".39" style="fill: #1a1a1a;"/>
           <rect x="366.49" y="318.559" width="6.1" height=".39" style="fill: #1a1a1a;"/>
           <rect x="366.29" y="318.559" width=".2" height=".39" style="fill: #1a1a1a;"/>
@@ -942,7 +1019,6 @@
           <rect x="366.49" y="323.869" width="15.92" height=".39" style="fill: #1a1a1a;"/>
           <rect x="366.19" y="323.869" width=".3" height=".39" style="fill: #1a1a1a;"/>
           <rect x="382.41" y="323.869" width=".09" height=".39" style="fill: #1a1a1a;"/>
-          <polygon points="410.41 333.979 410.41 334.759 366.49 334.759 366.49 333.979 382.41 333.979 382.41 334.249 382.8 334.249 382.8 333.979 410.41 333.979" style="fill: #1a1a1a;"/>
           <rect x="365.71" y="333.979" width=".78" height=".78" style="fill: #1a1a1a;"/>
           <rect x="382.41" y="333.979" width=".39" height=".27" style="fill: #1a1a1a;"/>
           <rect x="410.41" y="333.979" width=".78" height=".78" style="fill: #1a1a1a;"/>
@@ -950,13 +1026,16 @@
           <rect x="410.41" y="307.789" width=".78" height=".82" style="fill: #1a1a1a;"/>
           <rect x="410.41" y="333.979" width=".78" height=".78" style="fill: #1a1a1a;"/>
           <rect x="410.41" y="307.819" width="53.22" height=".79" style="fill: #1a1a1a;"/>
-          <rect x="462.851" y="285.639" width=".784" height="22.968" style="fill: #1a1a1a;"/>
+          <rect x="462.851" y="285.639" width=".784" height="18.143" style="fill: #1a1a1a;"/>
+          <rect x="462.851" y="307.171" width=".784" height="1.167" style="fill: #1a1a1a;"/>
           <rect x="436.679" y="259.553" width=".784" height="52.956" transform="translate(723.102 -151.04) rotate(90)" style="fill: #1a1a1a;"/>
           <rect x="335.04" y="292.969" width="30.67" height=".78" style="fill: #1a1a1a;"/>
           <rect x="334.26" y="292.969" width=".78" height=".78" style="fill: #1a1a1a;"/>
           <rect x="334.26" y="293.749" width=".78" height="25.38" style="fill: #1a1a1a;"/>
           <rect x="334.26" y="292.969" width=".78" height=".78" style="fill: #1a1a1a;"/>
           <rect x="335.04" y="318.349" width="31.06" height=".78" style="fill: #1a1a1a;"/>
+          <rect x="365.71" y="333.979" width="19.378" height=".78" style="fill: #1a1a1a;"/>
+          <rect x="391.884" y="333.979" width="19.306" height=".78" style="fill: #1a1a1a;"/>
           <rect x="366.1" y="318.349" width=".39" height=".78" style="fill: #1a1a1a;"/>
           <polygon points="366.19 323.869 366.19 324.259 366.49 324.259 366.49 333.979 365.71 333.979 365.71 319.129 366.49 319.129 366.49 323.869 366.19 323.869" style="fill: #1a1a1a;"/>
           <rect x="366.19" y="323.869" width=".3" height=".39" style="fill: #1a1a1a;"/>
@@ -964,7 +1043,8 @@
           <rect x="410.41" y="283.939" width=".78" height="2.48" style="fill: #1a1a1a;"/>
           <rect x="365.71" y="284.729" width=".78" height="8.24" style="fill: #1a1a1a;"/>
           <rect x="365.71" y="292.969" width=".78" height=".78" style="fill: #1a1a1a;"/>
-          <rect x="365.71" y="283.939" width="44.7" height=".79" style="fill: #1a1a1a;"/>
+          <rect x="365.71" y="283.939" width="17.933" height=".79" style="fill: #1a1a1a;"/>
+          <rect x="388.06" y="283.939" width="23.13" height=".79" style="fill: #1a1a1a;"/>
           <rect x="410.41" y="283.939" width=".39" height=".79" style="fill: #1a1a1a;"/>
         </g>
       </g>
@@ -1024,7 +1104,7 @@
           <rect x="389.37" y="295.569" width="7.93" height=".46" style="fill: #1a1a1a;"/>
           <rect x="400.91" y="295.569" width="9.56" height=".46" style="fill: #1a1a1a;"/>
           <rect x="365.71" y="333.969" width="45.48" height=".78" style="fill: #1a1a1a;"/>
-          <rect x="410.406" y="307.776" width=".784" height="26.973" style="fill: #1a1a1a;"/>
+          <rect x="410.406" y="307.815" width=".784" height="26.935" style="fill: #1a1a1a;"/>
           <rect x="410.406" y="307.815" width="38.918" height=".784" style="fill: #1a1a1a;"/>
           <rect x="448.54" y="285.629" width=".78" height="22.97" style="fill: #1a1a1a;"/>
           <rect x="410.59" y="285.629" width="38.73" height=".79" style="fill: #1a1a1a;"/>
@@ -1040,13 +1120,13 @@
           <rect x="414.27" y="291.159" width="9.48" height=".39" style="fill: #1a1a1a;"/>
           <rect x="400.91" y="291.159" width="10.85" height=".39" style="fill: #1a1a1a;"/>
           <rect x="388.92" y="291.159" width="8.66" height=".39" style="fill: #1a1a1a;"/>
-          <rect x="438.682" y="291.551" width=".45" height="16.264" style="fill: #1a1a1a;"/>
+          <rect x="438.68" y="291.549" width=".45" height="16.27" style="fill: #1a1a1a;"/>
           <rect x="431.859" y="291.551" width=".45" height="16.264" style="fill: #1a1a1a;"/>
           <rect x="410.406" y="291.551" width=".45" height="16.264" style="fill: #1a1a1a;"/>
           <rect x="388.925" y="291.159" width=".433" height="23.489" style="fill: #1a1a1a;"/>
           <rect x="380.206" y="295.678" width=".433" height="18.47" style="fill: #1a1a1a;"/>
           <rect x="388.92" y="322.419" width=".44" height="11.69" style="fill: #1a1a1a;"/>
-          <rect x="380.639" y="323.654" width="2.275" height=".433" style="fill: #1a1a1a;"/>
+          <rect x="380.64" y="323.659" width="2.27" height=".43" style="fill: #1a1a1a;"/>
           <rect x="380.21" y="317.409" width=".43" height="1.8" style="fill: #1a1a1a;"/>
           <rect x="388.92" y="317.879" width=".44" height="1.33" style="fill: #1a1a1a;"/>
           <rect x="386.76" y="323.659" width="2.16" height=".43" style="fill: #1a1a1a;"/>
