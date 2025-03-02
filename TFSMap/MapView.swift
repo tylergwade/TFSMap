@@ -33,12 +33,15 @@ class Building {
     public let name: String
     public let roofNode: SVGNode
     public let hitRect: CGRect
-    public var floors:[Floor] = []
+    public let floors:[Floor]
+    public let defaultFloor: Int
     
-    init(named name: String, roofNode: SVGNode, hitRect: CGRect) {
+    init(named name: String, roofNode: SVGNode, hitRect: CGRect, floors:[Floor], defaultFloor: Int) {
         self.name = name
         self.roofNode = roofNode
         self.hitRect = hitRect
+        self.floors = floors
+        self.defaultFloor = defaultFloor
     }
 }
 
@@ -91,99 +94,41 @@ struct MapView: View {
         let svgURL = Bundle.main.url(forResource: "TandemMap", withExtension: "svg")!
         self.svgView = SVGView(contentsOf: svgURL)
         
-        var mainBldg = Building(named: "Main Building",
-            roofNode: getNode(named: "Main_Roof"),
-            hitRect: getRect(named: "Main_HitBox"));
+        var mainBldg = addBuilding(named: "Main Building", id: "Main", numFloors: 2, defaultFloor: 0)
+        var communityBldg = addBuilding(named: "Community Hall", id: "Community", numFloors: 2, defaultFloor: 1)
+        var artBldg = addBuilding(named: "Arts Annex", id: "Art", numFloors: 2, defaultFloor: 0)
+        var musicBldg = addBuilding(named: "Music", id: "Music", numFloors: 1, defaultFloor: 0)
+        var middleBldg = addBuilding(named: "Middle School", id: "Middle", numFloors: 2, defaultFloor: 1)
+        var mathBldg = addBuilding(named: "Math/Science", id: "Math", numFloors: 2, defaultFloor: 1)
+        var pavilionBldg = addBuilding(named: "Pavilion", id: "Pavilion", numFloors: 1, defaultFloor: 0)
+        var gymBldg = addBuilding(named: "Field House/Gym", id: "Gym", numFloors: 1, defaultFloor: 0)
+    }
+    
+    mutating func addBuilding(
+        named name: String, id: String,
+        numFloors: Int, defaultFloor: Int) -> Building {
         
-        var mainBldg_F1 = Floor(svgNode: getNode(named: "Main_F1"))
-        var mainBldg_F2 = Floor(svgNode: getNode(named: "Main_F2"))
-        mainBldg.floors.append(mainBldg_F1)
-        mainBldg.floors.append(mainBldg_F2)
-        mainBldg_F1.svgNode.opacity = 0
-        mainBldg_F2.svgNode.opacity = 0
+        let hitBoxNode = getNode(named: id + "_HitBox")
+        let hitRect = svgRectToCGRect(hitBoxNode as! SVGRect)
         
-        var communityBldg = Building(named: "Community Hall",
-            roofNode: getNode(named: "Community_Roof"),
-            hitRect: getRect(named: "Community_HitBox"))
+        var floors:[Floor] = []
         
-        var communityBldg_F1 = Floor(svgNode: getNode(named: "Community_F1"))
-        var communityBldg_F2 = Floor(svgNode: getNode(named: "Community_F2"))
-        communityBldg.floors.append(communityBldg_F1)
-        communityBldg.floors.append(communityBldg_F2)
-        communityBldg_F1.svgNode.opacity = 0
-        communityBldg_F2.svgNode.opacity = 0
+        for index in 1...numFloors {
+            let floorNode = getNode(named: id + "_F" + String(index))
+            floorNode.opacity = 0
+            floors.append(Floor(svgNode: floorNode))
+        }
         
-        var artBldg = Building(named: "Arts Annex",
-            roofNode: getNode(named: "Art_Roof"),
-            hitRect: getRect(named: "Art_HitBox"))
+        var building = Building(
+            named: name,
+            roofNode: getNode(named: id + "_Roof"),
+            hitRect: hitRect,
+            floors: floors,
+            defaultFloor: defaultFloor)
         
-        var artBldg_F1 = Floor(svgNode: getNode(named: "Art_F1"))
-        artBldg.floors.append(artBldg_F1)
-        artBldg_F1.svgNode.opacity = 0
-        
-        var musicBldg = Building(named: "Music",
-            roofNode: getNode(named: "Music_Roof"),
-            hitRect: getRect(named: "Music_HitBox"))
-        
-        var musicBldg_F1 = Floor(svgNode: getNode(named: "Music_F1"))
-        musicBldg.floors.append(musicBldg_F1)
-        musicBldg_F1.svgNode.opacity = 0
-        
-        var middleBldg = Building(named: "Middle School",
-            roofNode: getNode(named: "Middle_Roof"),
-            hitRect: getRect(named: "Middle_HitBox"))
-        
-        var middleBldg_F1 = Floor(svgNode: getNode(named: "Middle_F1"))
-        var middleBldg_F2 = Floor(svgNode: getNode(named: "Middle_F2"))
-        middleBldg.floors.append(middleBldg_F1)
-        middleBldg.floors.append(middleBldg_F2)
-        middleBldg_F1.svgNode.opacity = 0
-        middleBldg_F2.svgNode.opacity = 0
-        
-        var mathBldg = Building(named: "Math/Science Building",
-            roofNode: getNode(named: "Math_Roof"),
-            hitRect: getRect(named: "Math_HitBox"))
-        
-        var mathBldg_F1 = Floor(svgNode: getNode(named: "Math_F1"))
-        var mathBldg_F2 = Floor(svgNode: getNode(named: "Math_F2"))
-        mathBldg.floors.append(mathBldg_F1)
-        mathBldg.floors.append(mathBldg_F2)
-        mathBldg_F1.svgNode.opacity = 0
-        mathBldg_F2.svgNode.opacity = 0
-        
-        var pavilionBldg = Building(named: "Pavilion",
-            roofNode: getNode(named: "Pavilion_Roof"),
-            hitRect: getRect(named: "Pavilion_HitBox"))
-        
-        var pavilionBldg_F1 = Floor(svgNode: getNode(named: "Pavilion_F1"))
-        pavilionBldg.floors.append(pavilionBldg_F1)
-        pavilionBldg_F1.svgNode.opacity = 0
-        
-        var gymBldg = Building(named: "Field House/Gym",
-            roofNode: getNode(named: "Gym_Roof"),
-            hitRect: getRect(named: "Gym_HitBox"))
-        
-        var gymBldg_F1 = Floor(svgNode: getNode(named: "Gym_F1"))
-        gymBldg.floors.append(gymBldg_F1)
-        gymBldg_F1.svgNode.opacity = 0
-        
-        buildings.append(mainBldg)
-        buildings.append(communityBldg)
-        buildings.append(artBldg)
-        buildings.append(musicBldg)
-        buildings.append(middleBldg)
-        buildings.append(mathBldg)
-        buildings.append(pavilionBldg)
-        buildings.append(gymBldg)
-        
-        getNode(named: "Main_HitBox").opacity = 0
-        getNode(named: "Community_HitBox").opacity = 0
-        getNode(named: "Art_HitBox").opacity = 0
-        getNode(named: "Math_HitBox").opacity = 0
-        getNode(named: "Music_HitBox").opacity = 0
-        getNode(named: "Middle_HitBox").opacity = 0
-        getNode(named: "Gym_HitBox").opacity = 0
-        getNode(named: "Pavilion_HitBox").opacity = 0
+        buildings.append(building)
+        hitBoxNode.opacity = 0
+        return building
     }
     
     func getNode(named name: String) -> SVGNode {
