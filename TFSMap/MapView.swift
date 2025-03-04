@@ -12,36 +12,46 @@ import SVGView
 
 class Room {
     public let name: String
+    public let position: CGPoint
     
-    init(named name: String) {
+    init(named name: String, at position: CGPoint) {
         self.name = name
+        self.position = position
     }
 }
 
 class Floor {
     
     public let svgNode: SVGNode
-    public let rooms:[Room] = []
+    public let level: Int
+    public var rooms:[Room] = []
+    public var building: Building? = nil
     
-    init(svgNode: SVGNode) {
+    init(svgNode: SVGNode, level: Int) {
         self.svgNode = svgNode
+        self.level = level
     }
 }
 
 class Building {
     
     public let name: String
+    public let id: String
     public let roofNode: SVGNode
     public let hitRect: CGRect
-    public let floors:[Floor]
+    public var floors:[Floor]
     public let defaultFloor: Int
     
-    init(named name: String, roofNode: SVGNode, hitRect: CGRect, floors:[Floor], defaultFloor: Int) {
+    init(
+        named name: String, roofNode: SVGNode,
+        hitRect: CGRect, floors:[Floor],
+        defaultFloor: Int, id: String) {
         self.name = name
         self.roofNode = roofNode
         self.hitRect = hitRect
         self.floors = floors
         self.defaultFloor = defaultFloor
+        self.id = id
     }
 }
 
@@ -94,14 +104,47 @@ struct MapView: View {
         let svgURL = Bundle.main.url(forResource: "TandemMap", withExtension: "svg")!
         self.svgView = SVGView(contentsOf: svgURL)
         
-        var mainBldg = addBuilding(named: "Main Building", id: "Main", numFloors: 2, defaultFloor: 0)
-        var communityBldg = addBuilding(named: "Community Hall", id: "Community", numFloors: 2, defaultFloor: 1)
-        var artBldg = addBuilding(named: "Arts Annex", id: "Art", numFloors: 2, defaultFloor: 0)
-        var musicBldg = addBuilding(named: "Music", id: "Music", numFloors: 1, defaultFloor: 0)
-        var middleBldg = addBuilding(named: "Middle School", id: "Middle", numFloors: 2, defaultFloor: 1)
-        var mathBldg = addBuilding(named: "Math/Science", id: "Math", numFloors: 2, defaultFloor: 1)
-        var pavilionBldg = addBuilding(named: "Pavilion", id: "Pavilion", numFloors: 1, defaultFloor: 0)
-        var gymBldg = addBuilding(named: "Field House/Gym", id: "Gym", numFloors: 1, defaultFloor: 0)
+        // Initialize buildings
+        var main = addBuilding(
+            named: "Main Building", id: "Main",
+            numFloors: 2, defaultFloor: 0)
+        var community = addBuilding(
+            named: "Community Hall", id: "Community",
+            numFloors: 2, defaultFloor: 1)
+        var art = addBuilding(
+            named: "Arts Annex", id: "Art",
+            numFloors: 2, defaultFloor: 0)
+        var music = addBuilding(
+            named: "Music", id: "Music",
+            numFloors: 1, defaultFloor: 0)
+        var middle = addBuilding(
+            named: "Middle School", id: "Middle",
+            numFloors: 2, defaultFloor: 1)
+        var math = addBuilding(
+            named: "Math/Science", id: "Math",
+            numFloors: 2, defaultFloor: 1)
+        var pavilion = addBuilding(
+            named: "Pavilion", id: "Pavilion",
+            numFloors: 1, defaultFloor: 0)
+        var gym = addBuilding(
+            named: "Field House/Gym", id: "Gym",
+            numFloors: 1, defaultFloor: 0)
+        
+        // Initialize room names in each building
+        addRoom(pavilion.floors[0], "Storage", "Storage")
+    }
+    
+    mutating func addRoom(_ floor: Floor, _ name: String, _ id: String) {
+        // For some reason the compiler cannot type check
+        // this expression in reasonable time?????
+        //let roomId = floor.building!.name + "_F" + String(floor.level) + "_" + id;
+        
+        let part1 = floor.building!.name + "_F"
+        let part2 = String(floor.level) + "_" + id
+        let roomId = part1 + part2
+        
+        let node = getNode(named: roomId) as! SVGCircle
+        floor.rooms.append(Room(named: name, at: CGPoint(x: node.cx, y: node.cy)))
     }
     
     mutating func addBuilding(
@@ -116,15 +159,20 @@ struct MapView: View {
         for index in 1...numFloors {
             let floorNode = getNode(named: id + "_F" + String(index))
             floorNode.opacity = 0
-            floors.append(Floor(svgNode: floorNode))
+            floors.append(Floor(svgNode: floorNode, level: index))
         }
         
-        var building = Building(
+        let building = Building(
             named: name,
             roofNode: getNode(named: id + "_Roof"),
             hitRect: hitRect,
             floors: floors,
-            defaultFloor: defaultFloor)
+            defaultFloor: defaultFloor,
+            id: id)
+            
+        for index in 0..<numFloors {
+            building.floors[index].building = building
+        }
         
         buildings.append(building)
         hitBoxNode.opacity = 0
@@ -178,7 +226,7 @@ struct MapView: View {
             y: CGFloat(trPoint.y))
     }
     
-    // Gets the building that contains mapPoint
+    // Gets the building whose hitRect contains mapPoint
     private func getBuilding(at mapPoint: CGPoint) -> Building? {
         for building in buildings {
             if building.hitRect.contains(mapPoint) {
