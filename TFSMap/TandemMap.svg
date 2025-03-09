@@ -545,7 +545,7 @@
           <circle id="Math_F2_Gauss" cx="471.2403" cy="144.6656" r="2.2628" style="fill: #ec1e79;"/>
           <circle id="Math_F2_MRest" cx="453.5604" cy="145.9056" r="2.2628" style="fill: #ec1e79;"/>
           <circle id="Math_F2_FRest" cx="438.05" cy="105.35" r="2.2628" style="fill: #ec1e79;"/>
-          <circle id="Math_F2_Stars" cx="437.7176" cy="147.5237" r="2.2628" style="fill: #ec1e79;"/>
+          <circle id="Math_F2_Stairs" cx="437.7176" cy="147.5237" r="2.2628" style="fill: #ec1e79;"/>
         </g>
       </g>
       <g id="Math_Roof">
@@ -976,7 +976,7 @@
         </g>
         <g id="Names-9" data-name="Names">
           <circle id="Community_F2_Backstage" cx="219.135" cy="194.1259" r="2.2628" style="fill: #ec1e79;"/>
-          <circle id="Community_F2_CustomeCloset" cx="216.1202" cy="174.0924" r="2.2628" style="fill: #ec1e79;"/>
+          <circle id="Community_F2_Closet" cx="216.1202" cy="174.0924" r="2.2628" style="fill: #ec1e79;"/>
           <circle id="Community_F2_MRest" cx="236.6759" cy="228.5189" r="2.2628" style="fill: #ec1e79;"/>
           <circle id="Community_F2_FRest" cx="236.9352" cy="238.2683" r="2.2628" style="fill: #ec1e79;"/>
           <circle id="Community_F2_Lobby" cx="261.7081" cy="227.1023" r="2.2628" style="fill: #ec1e79;"/>
